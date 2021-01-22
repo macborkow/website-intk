@@ -67,10 +67,10 @@ body {
   .scroll {
       overflow-y: auto;
       position: relative;
-      top: 15vh;
+      top: 8vh;
       padding: 1vw;
       scroll-behavior: smooth;
-      height: 63vh;
+      height: 69vh;
       color: white;
       -ms-overflow-style: none;
       scrollbar-width: none; 
@@ -96,7 +96,7 @@ body {
 }
 
 .tab {
-    top: 10vh;
+    top: 7vh;
     position: relative;
     text-align: center;
     font-size: 2.5vw;
