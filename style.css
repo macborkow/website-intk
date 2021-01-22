@@ -110,3 +110,21 @@ body {
     -webkit-animation: glow-in 0.5s normal;
     text-shadow: 0 0 1vw #fff, 0 0 1.5vw #ff4da6, 0 0 2vw #ff4da6, 0 0 2.5vw #ff4da6, 0 0 3vw #ff4da6, 0 0 3.5vw #ff4da6, 0 0 4vw #ff4da6;
 }
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 50 vh;
+  }
+
+  .tab {
+    font-size: 4 vh;
+  }
+
+  body {
+    font-size: 1 vh;
+  }
+
+  #content {
+    border-radius: 2vh;
+  }
+}
