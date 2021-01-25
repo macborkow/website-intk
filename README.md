@@ -1,2 +1,5 @@
 # website-intk
-Personal website, made especially for INTK
+
+Personal website. Made using `npm`, `webpack`, `CSS`, `HTML`, `JavaScript`.
+
+[Github pages link](https://github.com/macborkow/website-intk)
