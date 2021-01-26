@@ -43,7 +43,7 @@ const intro = () => {
     let content = document.createElement('div');
     content.setAttribute('class', 'fade-in');
     content.appendChild(addParagraph('Hello there!'));
-    content.appendChild(addParagraph('My name is Maciej, I\'m a recent engineering graduate seeking to launch his IT career.'));
+    content.appendChild(addParagraph('My name is Maciej, I\'m a recent engineering graduate seeking to launch my IT career.'));
     content.appendChild(addParagraph('My main area of interests currently is full-stack web development, although I\'ve also been busy making various programs in C++ and Python and games using Unity engine.'));
     content.appendChild(addParagraph(`Skills that I\'m trying to incorporate fully into my stack: <ul> 
     <li>React</li>
