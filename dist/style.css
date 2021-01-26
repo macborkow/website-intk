@@ -1,20 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+/*
+old
+--bg-color: #29132e;
+--neon: #ff4da6;
+--dark-neon: #e60073;
+--font-color: #000;
+*/
+
+
 body {
-    background-color: #29132e;
+  --bg-color: #29132e;
+  --neon: #ff4da6;
+  --dark-neon: #e60073;
+  --font-color: ghostwhite;
+  --unclicked-font: lightgray;
+    background-color: var(--bg-color);
     border: 1vw solid transparent;
-
     font-family: 'Nunito', sans-serif;
-
 }
 
 #content {
     display: block;
     height: 100%;
-    width: 100%;
-    border: 0.05vw solid #ff4da6;
+    width: 50%;
+    margin: auto;
+    border: 0.05vw solid var(--neon);
     border-radius: 2vw;
-    box-shadow: 0px 0px 1vw #ff4da6 ;
+    box-shadow: 0px 0px 1vw var(--neon) ;
+    padding-bottom: 4vh;
 }
 
 .glow {
@@ -23,36 +37,46 @@ body {
 
 @-webkit-keyframes glow {
     from {
-      text-shadow: 0 0 0.5vw #fff, 0 0 1vw #fff, 0 0 1.5vw #e60073, 0 0 2vw #e60073, 0 0 2.5vw #e60073, 0 0 3vw #e60073, 0 0 3.5vw #e60073;
+      text-shadow: 0 0 0.5vw #fff, 0 0 1vw #fff, 0 0 1.5vw var(--dark-neon), 0 0 2vw var(--dark-neon), 0 0 2.5vw var(--dark-neon), 0 0 3vw var(--dark-neon), 0 0 3.5vw var(--dark-neon);
     }
     
     to {
-      text-shadow: 0 0 1vw #fff, 0 0 1.5vw #ff4da6, 0 0 2vw #ff4da6, 0 0 2.5vw #ff4da6, 0 0 3vw #ff4da6, 0 0 3.5vw #ff4da6, 0 0 4vw #ff4da6;
+      text-shadow: 0 0 1vw #fff, 0 0 1.5vw var(--neon), 0 0 2vw var(--neon), 0 0 2.5vw var(--neon), 0 0 3vw var(--neon), 0 0 3.5vw var(--neon), 0 0 4vw var(--neon);
     }
   }
 
   @-webkit-keyframes glow-in {
       from {
         text-shadow: 0 0 0;
-        color:lightgray;
+        color: var(--unclicked-font);
       }
 
       to {
           color: white;
-        text-shadow: 0 0 1vw #fff, 0 0 1.5vw #ff4da6, 0 0 2vw #ff4da6, 0 0 2.5vw #ff4da6, 0 0 3vw #ff4da6, 0 0 3.5vw #ff4da6, 0 0 4vw #ff4da6;
+        text-shadow: 0 0 1vw #fff, 0 0 1.5vw var(--neon), 0 0 2vw var(--neon), 0 0 2.5vw var(--neon), 0 0 3vw var(--neon), 0 0 3.5vw var(--neon), 0 0 4vw var(--neon);
       }
   }
 
   @-webkit-keyframes glow-out {
       0% {
         color: white;
-        text-shadow: 0 0 1vw #fff, 0 0 1.5vw #ff4da6, 0 0 2vw #ff4da6, 0 0 2.5vw #ff4da6, 0 0 3vw #ff4da6, 0 0 3.5vw #ff4da6, 0 0 4vw #ff4da6;
+        text-shadow: 0 0 1vw #fff, 0 0 1.5vw var(--neon), 0 0 2vw var(--neon), 0 0 2.5vw var(--neon), 0 0 3vw var(--neon), 0 0 3.5vw var(--neon), 0 0 4vw var(--neon);
       }
 
       100% {
-        color: lightgray;
+        color: var(--unclicked-font);
         text-shadow: 0 0 0;
       }
+  }
+
+  @-webkit-keyframes fade-in {
+    0% {
+      color: transparent;
+    }
+
+    100% {
+      color: var(--font-color);
+    }
   }
 
   h1 {
@@ -64,21 +88,27 @@ body {
       cursor: default;
   }
 
+  p {
+    padding-bottom: 1vh;
+  }
+
   .scroll {
       overflow-y: auto;
       position: relative;
-      top: 8vh;
+      top: 4vh;
       padding: 1vw;
       scroll-behavior: smooth;
-      color: white;
+      color: var(--font-color);
       -ms-overflow-style: none;
       scrollbar-width: none; 
       text-align: justify;
-      padding-bottom: 10vh;
+      padding: 3vw;
+      padding-bottom: 7vh;
+      max-height: 50vh;
   }
 
   .scroll a {
-    color: white;
+    color: var(--font-color);
   }
 
   .scroll::-webkit-scrollbar {
@@ -97,22 +127,41 @@ body {
     z-index: 0;
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: 2vh;
 }
 
 .tab {
+  z-index: 1;
     top: 7vh;
     position: relative;
     text-align: center;
     font-size: 2.5vw;
-    color: lightgray;
+    color: var(--unclicked-font);
     -webkit-animation: glow-out 0.5s normal;
 }
 
-.tab:hover {
+.tab:hover, a:hover {
     cursor: pointer;
     color: white;
     -webkit-animation: glow-in 0.5s normal;
-    text-shadow: 0 0 1vw #fff, 0 0 1.5vw #ff4da6, 0 0 2vw #ff4da6, 0 0 2.5vw #ff4da6, 0 0 3vw #ff4da6, 0 0 3.5vw #ff4da6, 0 0 4vw #ff4da6;
+    text-shadow: 0 0 1vw #fff, 0 0 1.5vw var(--neon), 0 0 2vw var(--neon), 0 0 2.5vw var(--neon), 0 0 3vw var(--neon), 0 0 3.5vw var(--neon), 0 0 4vw var(--neon);
+}
+
+.fade-in {
+  -webkit-animation: fade-in 1s normal;
+}
+
+a {
+  -webkit-animation: glow-out 0.5s normal;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 2vw;
+}
+
+li {
+  padding: 1vw;
 }
 
 @media only screen and (max-width: 480px) {
@@ -133,9 +182,10 @@ body {
 
   #content {
     border-radius: 5vh;
-    border: 0.3vh solid #ff4da6;
+    border: 0.3vh solid var(--neon);
     height: 90%;
-    box-shadow: 0px 0px 3vh #ff4da6 ;
+    width: 100%;
+    box-shadow: 0px 0px 3vh var(--neon) ;
 
   }
 }
