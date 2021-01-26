@@ -7,7 +7,7 @@ const addParagraph = (text) => {
 const portfolio = () => {
     let content = document.createElement('div');
     content.setAttribute('class', 'fade-in');
-    let gitParagraph = addParagraph('<a href=\'github.com/macborkow\'>github</a>';
+    let gitParagraph = addParagraph('<a href=\'github.com/macborkow\'>github</a>');
     gitParagraph.style.textAlign = 'center';
     gitParagraph.style.position = 'relative';
     gitParagraph.style.right = '2vw';
