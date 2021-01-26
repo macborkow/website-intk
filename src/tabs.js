@@ -48,7 +48,7 @@ const intro = () => {
     content.appendChild(addParagraph(`Skills that I\'m trying to incorporate fully into my stack: <ul> 
     <li>React</li>
     <li>Node</li>
-    <li>MangoDB</li>
+    <li>MongoDB</li>
     <li>Docker</li>
     `));
     content.appendChild(addParagraph('When I\'m not busy coding you could probably find me playing guitar, chess or cooking.'));
