@@ -14,7 +14,7 @@ const init = () => {
     content.appendChild(h1);
     content.appendChild(tabWrapper);
     content.appendChild(scroll);
-
+    
     let tabs = [];
 
     for(let i = 0; i < 3; ++i) {

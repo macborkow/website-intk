@@ -7,7 +7,11 @@ const addParagraph = (text) => {
 const portfolio = () => {
     let content = document.createElement('div');
     content.setAttribute('class', 'fade-in');
-    content.appendChild(addParagraph('<a href=\'github.com/macborkow\'>github</a>'));
+    let gitParagraph = addParagraph('<a href=\'github.com/macborkow\'>github</a>';
+    gitParagraph.style.textAlign = 'center';
+    gitParagraph.style.position = 'relative';
+    gitParagraph.style.right = '2vw';
+    content.appendChild(gitParagraph);
     content.appendChild(document.createElement('br'));
     content.appendChild(addParagraph(`Few examples of my projects: <ul>
     <li><a href=\'https://github.com/macborkow/website-intk\'>This very page</a></li>
