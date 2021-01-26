@@ -9,7 +9,6 @@ body {
   background-color: var(--bg-color);
   border: 1vw solid transparent;
   font-family: 'Nunito', sans-serif;
-  animation: fade-in 0.5s ease;
 }
 
 h1 {
@@ -90,19 +89,19 @@ li {
   text-align: center;
   font-size: 2.5vw;
   color: var(--unclicked-font);
-  animation: glow-out 0.5s normal;
+  animation: glow-out 0.25s normal;
 }
 
 .tab:hover, a:hover {
   cursor: pointer;
   color: white;
-  animation: glow-in 0.5s normal;
+  animation: glow-in 0.25s normal;
   text-shadow: 0 0 1vw #fff, 0 0 1.5vw var(--neon), 0 0 2vw var(--neon), 0 0 2.5vw var(--neon), 0 0 3vw var(--neon), 0 0 3.5vw var(--neon), 0 0 4vw var(--neon);
 }
 
 .fade-in {
   z-index: 2;
-  animation: fade-in 1s linear;
+  animation: fade-in 0.5s linear;
 }
 
 /*reset*/
