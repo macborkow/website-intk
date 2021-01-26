@@ -9,6 +9,7 @@ body {
   background-color: var(--bg-color);
   border: 1vw solid transparent;
   font-family: 'Nunito', sans-serif;
+  animation: fade-in 0.5s ease;
 }
 
 h1 {
@@ -100,7 +101,8 @@ li {
 }
 
 .fade-in {
-  animation: fade-in 1s normal;
+  z-index: 2;
+  animation: fade-in 1s linear;
 }
 
 /*reset*/
@@ -144,10 +146,10 @@ li {
 
 @keyframes fade-in {
   0% {
-    color: transparent;
+    opacity: 0;
   }
   100% {
-    color: var(--font-color);
+    opacity: 1;
   }
 }
 
